@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+
+    * {
+        margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+   .hambuger{
+    top: 5px;
+    right:  30px;
+    position: fixed;
+}
+    
+    body {
+       background-color: aquamarine;
+    }
+    .sidebar{
+        min-width: 300px;
+        padding: block;
+        height: 100vh;
+        top: 10px;
+        right: 200px;
+        background-color: black;
+        position: fixed;
+        top:0 ;
+        left: -300px;
+        transition: 0.2ms linear;
+    }
+  .sidebar.is-active{
+    left: 0;
+  }
+
+    
+    </style>
+</head>
+<!-- <button type="button"
+onclick="document.getElementById('sidebar').innerHTML = (classlist.toggle)">
+hamburer</button> -->
+<button class="hambuger">click me</button>
+
+
+<body>
+    <div>
+
+<aside class="sidebar">
+    <nav class="menu">
+        <a href="#" class="menu-item">HOME</a>
+        <a href="#" class="menu-item">about</a>
+        <a href="#" class="menu-item">protfolio</a>
+        <a href="#" class="menu-item">contact</a>
+    </nav>
+</aside>
+</div>
+
+
+
+
+<script>
+    const menu_toggle = document.querySelectorAll('#hamburer');
+    const sidebar = document.querySelectorAll('.sidebar');
+    menu_toggle.addEventListener('click',() =>{
+        sidebar.classlist.toggle('is-active');
+    });
+</script>
+</body>
+</html>
+
